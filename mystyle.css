@@ -1,0 +1,25 @@
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+    }
+}
+p { font-size : 15px; }
+h1 { font-size : 34px; margin : 0; padding : 0; }
+h2 { font-size : 20px; margin : 0; padding : 0; }
+h3 { font-size : 15px; margin : 8; padding : 0; }
+/* body { padding : 0; font-family : Arial; font-size : 16px; background-color : #cbcbcb; } */
+body { padding : 0; font-family : Arial; font-size : 15px; background-color : #d6d6d6; }
+
+.title{width: 750px; margin: 20px auto; }
+#photo{padding: 20px 40px; margin-right: 40px; float: left;}
+#bio{padding: 20px;}
+
+
+.block{width: 750px; margin: 20px auto; }
+.logo-block{margin-top: 40px;}
+.logo{width: 80px; float: left; margin-right: 30px;}
+.note{margin: 10px 0; font-size : 15px;}
+.block-border{padding: 30px; background-color: #fff; border-radius: 15px }
+.paper-title{font-size: 17px; color:darkblue}
+.paper{margin-bottom: 15px;}
+.highlight{color: red; font-weight:bold}
