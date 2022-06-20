@@ -3,6 +3,7 @@
         -webkit-text-size-adjust: none;
     }
 }
+a{text-decoration:none;}
 p { font-size : 15px; }
 h1 { font-size : 34px; margin : 0; padding : 0; }
 h2 { font-size : 20px; margin : 0; padding : 0; }
