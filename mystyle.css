@@ -181,3 +181,70 @@ ol{ padding-left: 2rem; }
 .highlight a:visited { color: inherit; }
 .highlight a:hover,
 .highlight a:focus { text-decoration: underline; }  /* optional hover */
+
+/* --- Fix a small bug --- */
+h3 { font-size: 15px; margin: 8px; padding: 0; }   /* add px to margin */
+
+/* --- Fluid containers instead of fixed widths --- */
+.title,
+.block {
+  max-width: 1000px;              /* overall max on large screens */
+  width: 100%;                    /* let them shrink on phones */
+  margin: 20px auto;
+}
+.block { padding: 16px; }
+.block-border { padding: clamp(16px, 2vw, 30px); border-radius: 15px; }
+
+/* Keep the legacy max-width feel if you want exact old sizes on desktop: */
+@media (min-width: 1100px) {
+  .title { max-width: 750px; }
+  .block { max-width: 830px; }
+}
+
+/* --- Make images fluid --- */
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Top nav: allow wrapping & comfortable tapping --- */
+.block h2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* --- Home header: stack photo+bio on phones, side-by-side on wide --- */
+.block::after { content: ""; display: block; clear: both; } /* clear floats */
+#photo { float: none; margin: 0 auto 12px; padding: 0; text-align: center; }
+#bio   { padding: 0; text-align: center; }
+
+@media (min-width: 700px) {
+  #photo { float: left; padding: 20px 40px; margin-right: 40px; }
+  #bio   { padding: 20px; text-align: left; }
+}
+
+/* --- Gallery: wrap/grid so images don't overflow on phones --- */
+.image-gallery {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .image-gallery { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+}
+
+/* --- Typography that scales a bit on small screens --- */
+@media (max-width: 600px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 18px; }
+  p, .note, .caption { font-size: 15px; }
+  .block { padding: 14px; }
+}
+
+/* --- Let iOS adjust text normally (instead of disabling it) --- */
+html { -webkit-text-size-adjust: 100%; }
+
+/* Your existing anchor offset + lightbox styles are fine to keep */
+
