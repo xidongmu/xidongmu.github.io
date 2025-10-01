@@ -181,3 +181,62 @@ ol{ padding-left: 2rem; }
 .highlight a:visited { color: inherit; }
 .highlight a:hover,
 .highlight a:focus { text-decoration: underline; }  /* optional hover */
+
+body { margin: 0; }
+.top-block { margin-top: 0 !important; }
+
+.top-photos {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.top-photos picture { 
+  flex: 1 1 0; 
+  display: block; 
+}
+
+.top-photos img {
+  width: 100%;
+  height: 100px;        /* adjust to taste */
+  object-fit: contain;  /* no cropping; keeps full logos */
+  display: block;
+  border-radius: 8px;   /* optional */
+}
+
+@media (max-width: 768px) {
+  .top-photos { flex-direction: column; }
+  .top-photos img { height: 90px; }
+}
+
+/* two equal columns */
+.logos-equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* equal width boxes */
+  align-items: center;
+  gap: 24px;
+  padding: 10px 16px;
+}
+
+/* fixed-height boxes so the row looks balanced */
+.logo-box {
+  height: 110px;                  /* adjust to taste (90–120 works well) */
+  display: flex;
+  justify-content: center;        /* center image horizontally */
+  align-items: center;            /* center image vertically */
+  background: #fff;               /* optional, matches card style */
+  border-radius: 8px;             /* optional */
+}
+
+/* fit the image inside the box without distortion */
+.logo-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;            /* keep aspect ratio, no cropping */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logos-equal { grid-template-columns: 1fr; }
+  .logo-box { height: 90px; }
+}
