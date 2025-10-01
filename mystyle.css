@@ -16,11 +16,168 @@ body { padding : 0; font-family : Arial; font-size : 15px; background-color : #d
 #bio{padding: 20px;}
 
 
-.block{width: 750px; margin: 20px auto; }
+.block{width: 830px; margin: 20px auto; }
 .logo-block{margin-top: 40px;}
 .logo{width: 80px; float: left; margin-right: 30px;}
 .note{margin: 10px 0; font-size : 15px;}
 .block-border{padding: 30px; background-color: #fff; border-radius: 15px }
 .paper-title{font-size: 17px; color:darkblue}
 .paper{margin-bottom: 15px;}
-.highlight{color: red; font-weight:bold}
+.highlight{color: rgb(255, 0, 13); font-weight:bold}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-gallery { display: flex; justify-content: center; gap: 20px; align-items: flex-start; }
+.image-item { display: flex; flex-direction: column; align-items: center; margin: 0; }
+.caption { margin-top: 8px; font-size: 15px; text-align: center; color: #171616; }
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;                 /* hidden by default */
+  position: fixed;
+  z-index: 9999;
+  inset: 0;                      /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 4vw;
+}
+.lightbox.is-open { display: flex; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border: 2px solid #fff;
+}
+
+/* Optional: close button */
+.lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Prevent background scroll when lightbox is open */
+body.no-scroll { overflow: hidden; }
+
+/* Continuous numbering across all Journal Articles */
+.journal-articles { counter-reset: journal; }
+
+/* hide native <ol> numbers so we can control the sequence */
+.journal-articles ol { list-style: none; padding-left: 0; }
+
+/* number every journal item in order, across all <ol>s */
+.journal-articles li.paper {
+  counter-increment: journal;
+  position: relative;
+  padding-left: 2rem;   /* indent for the custom number */
+}
+
+.journal-articles li.paper::before {
+  content: counter(journal) ". ";
+  position: absolute;
+  left: 0;
+}
+
+/* Continuous numbering across all Conference Proceedings */
+.conference-proceedings { counter-reset: conf; }
+
+.conference-proceedings ol {
+  list-style: none;      /* hide native numbers */
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.conference-proceedings li.paper {
+  counter-increment: conf;
+  position: relative;
+  padding-left: 2rem;    /* space for the custom number */
+}
+
+.conference-proceedings li.paper::before {
+  content: counter(conf) ". ";
+  position: absolute;
+  left: 0;
+}
+
+/* Smooth anchor scrolling */
+html { scroll-behavior: smooth; }
+
+/* Sticky “Jump to” bar */
+.section-nav {
+  position: sticky;
+  top: 0;                 /* sticks under the browser chrome */
+  z-index: 1000;
+  background: #fff;       /* ensure readable when stuck */
+  border-radius: 15px;
+}
+
+/* Link chips */
+.section-nav a {
+  display: inline-block;
+  margin: 6px 8px 0 0;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: #f3f3f3;
+  font-size: 14px;
+}
+
+/* Active link highlight (used by JS below) */
+.section-nav a.active {
+  background: #047eb0;
+  color: #fff;
+}
+
+/* Mobile: let links wrap nicely */
+@media (max-width: 900px) {
+  .section-nav { top: 0; }
+  .section-nav a { font-size: 13px; padding: 5px 9px; }
+}
+
+/* Height of the sticky nav (approx). Bump if your nav wraps to 2 lines */
+:root { --nav-offset: 90px; }
+
+/* Smooth scroll + offset for anchor jumps */
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-offset); }
+
+/* Extra safety for elements you jump to */
+h1[id], h2[id], h3[id] { scroll-margin-top: var(--nav-offset); }
+
+/* Make publication items justified with good spacing */
+ol li.paper{
+  text-align: justify;
+  text-justify: inter-word;   /* extra support on some browsers */
+  text-align-last: left;      /* keep the last line non-stretched */
+  line-height: 1.5;
+  hyphens: auto;              /* nicer word breaks */
+}
+
+/* Let long links/DOIs wrap without breaking layout */
+ol li.paper a{
+  hyphens: none;
+  overflow-wrap: anywhere;
+}
+
+/* Optional: a bit more left padding so double-digit numbers don't crowd */
+ol{ padding-left: 2rem; }
+
+/* Only affect links inside the orange highlight badges */
+.highlight a {
+  color: inherit;          /* use the badge's orange instead of blue */
+  text-decoration: none;   /* optional: no underline */
+  font-weight: inherit;    /* keeps the badge's bold from .highlight */
+}
+.highlight a:visited { color: inherit; }
+.highlight a:hover,
+.highlight a:focus { text-decoration: underline; }  /* optional hover */
