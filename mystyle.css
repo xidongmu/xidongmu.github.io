@@ -240,27 +240,3 @@ body { margin: 0; }
   .logos-equal { grid-template-columns: 1fr; }
   .logo-box { height: 90px; }
 }
-
-/* === Header logos === */
-:root { --logo-height: 78px; }      /* tweak this number to your taste */
-
-.logos {
-  display: flex;
-  justify-content: center;          /* center both logos as a group */
-  align-items: center;
-  gap: 28px;                         /* space between the two logos */
-  padding: 10px 0;
-}
-
-.logos img {
-  height: var(--logo-height);       /* same visual height */
-  width: auto;                      /* keep aspect ratio */
-  max-width: 100%;
-  object-fit: contain;              /* no distortion or cropping */
-  display: block;
-}
-
-@media (max-width: 768px) {
-  :root { --logo-height: 64px; }    /* smaller on phones */
-}
-
