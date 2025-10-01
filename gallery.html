@@ -1,24 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <!-- Meta tags for search engines to crawl -->
-    <meta name="robots" content="index,follow">
-    <meta name="keywords" content="Xidong Mu; 慕熹东; Queen's University Belfast; Queen Mary University of London; Beijing University of Posts and Telecommunications;">
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-
+    <meta charset="utf-8">
     <title>Xidong Mu - Gallery</title>
-    <link href="./mystyle.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+        content="Xidong Mu; 慕熹东; Queen's University Belfast; Queen Mary University of London; Beijing University of Posts and Telecommunications;">
+    <link rel="stylesheet" href="./mystyle.css">
 </head>
+
+
+
 <body>
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+    </div>
 
     <div class="block block-border">
         <h2>
             <a href="./index.html">Home</a>&nbsp;&middot;
             <a href="./news.html">News</a>&nbsp;&middot;
             <a href="./research.html">Research</a>&nbsp;&middot;
+            <a href="./teaching.html">Teaching</a>&nbsp;&middot;
             <a href="./team.html">Team</a>&nbsp;&middot;
             <a href="./publications.html">Publications</a>&nbsp;&middot;
             <a href="./activities.html">Activities</a>&nbsp;&middot;
@@ -28,83 +34,157 @@
     </div>
 
 
-<div class="block block-border">    
+    <div class="block block-border">
         <h2 style="color: #047eb0;">Group Photos@SWIFT Lab</h2>
-        
-        <br>
+
         <h3>2025</h3>
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./img/2025_dinner.jpg" target="_blank" class="imageLink"><img src="./img/2025_dinner.jpg" border="2" height="200"></a>&nbsp;&nbsp;
-        <br>
-        
-        Welcome and farewell group dinner (left to right: X. Cheng, M. Sun, X. Mu, T. Shi, M. Qian)
+        <figure class="image-item">
+            <img src="./img/2025_dinner.jpg" data-full="./img/2025_dinner.jpg" height="200" border="2"
+                alt="SWIFT Lab dinner">
+            <figcaption class="caption">
+                Welcome and farewell group dinner (left to right: X. Cheng, M. Sun, X. Mu, T. Shi, M. Qian)
+            </figcaption>
+        </figure>
+
+
+
+
+
     </div>
-    
-    <div class="block block-border">    
+
+    <div class="block block-border">
         <h2 style="color: #047eb0;">Personal Awards</h2>
-        
-        <br>
+
         <h3>2023 IEEE ComSoc Outstanding Young Researcher Award for EMEA regions</h3>
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./img/EMEA.jpg" target="_blank" class="imageLink"><img src="./img/EMEA.jpg" border="2" height="200"></a>&nbsp;&nbsp;
-
+        <img src="./img/EMEA.jpg" class="center-img" data-full="./img/EMEA.jpg" height="200" border="2" alt="EMEA">
 
         <br>
         <br>
         <h3>Exemplary Reviewers in IEEE Top Journals</h3>
         <br>
-        <a href="./img/CL2023.png" target="_blank" class="imageLink"><img src="./img/CL2023.png" border="2" height="180"></a>&nbsp;&nbsp; 
-        <a href="./img/CL_2022.png" target="_blank" class="imageLink"><img src="./img/CL_2022.png" border="2" height="180"></a>&nbsp;&nbsp;
-        <a href="./img/CL_2021.png" target="_blank" class="imageLink"><img src="./img/CL_2021.png" border="2" height="180"></a>&nbsp;&nbsp;
+        <div class="image-gallery">
+            <img src="./img/CL2023.png" data-full="./img/CL2023.png" height="180" border="2"
+                alt="IEEE Communications Letters — Exemplary Reviewer 2023" loading="lazy">
+            <img src="./img/CL_2022.png" data-full="./img/CL_2022.png" height="180" border="2"
+                alt="IEEE Communications Letters — Exemplary Reviewer 2022" loading="lazy">
+            <img src="./img/CL_2021.png" data-full="./img/CL_2021.png" height="180" border="2"
+                alt="IEEE Communications Letters — Exemplary Reviewer 2021" loading="lazy">
+        </div>
 
+        <p style="text-align: center;">
+            IEEE Communication Letters in 2021, 2022, 2023.
+        </p>
         <br>
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IEEE Communication Letters in 2021, 2022, 2023.
         <br>
-        <br>
+        <div class="image-gallery">
+            <img src="./img/tcom22.png" data-full="./img/tcom22.png" height="180" border="2" alt="TCOM 2022">
+            <img src="./img/TCOM_2020.png" data-full="./img/TCOM_2020.png" height="180" border="2" alt="TCOM 2020">
+        </div>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./img/tcom22.png" target="_blank" class="imageLink"><img src="./img/tcom22.png" border="2" height="180"></a>&nbsp;&nbsp;
-        <a href="./img/TCOM_2020.png" target="_blank" class="imageLink"><img src="./img/TCOM_2020.png" border="2" height="180"></a>&nbsp;&nbsp;
-        <br>
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IEEE Transactions on Communications in 2020, 2022.
+        <p style="text-align: center;">
+            IEEE Transactions on Communications in 2020, 2022.
+        </p>
         <br>
         <br>
 
         <h3>IEEE ComSoc Student Travel Grants</h3>
         <br>
-       
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./img/ICC_STG_2022.png" target="_blank" class="imageLink"><img src="./img/ICC_STG_2022.png" border="2" height="180"></a>&nbsp;&nbsp;<a href="./img/ICC_STG_2021.png" target="_blank" class="imageLink"><img src="./img/ICC_STG_2021.png" border="2" height="180"></a>
-        <br>
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IEEE ICC 2021, 2022.
+
+        <div class="image-gallery">
+            <img src="./img/ICC_STG_2022.png" data-full="./img/ICC_STG_2022.png" height="180" border="2"
+                alt="IEEE ComSoc Student Travel Grant - ICC 2022">
+            <img src="./img/ICC_STG_2021.png" data-full="./img/ICC_STG_2021.png" height="180" border="2"
+                alt="IEEE ComSoc Student Travel Grant - ICC 2021">
+        </div>
+        <p style="text-align: center;">
+            IEEE ICC 2021, 2022.
+        </p>
+
 
     </div>
 
 
-    <div class="block block-border">    
+    <div class="block block-border">
         <h2 style="color: #047eb0;">Paper Awards</h2>
         <br>
         <h3>2024 IEEE Communications Society Heinrich Hertz Award for Best Communications Letter</h3>
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./img/award2.jpg" target="_blank" class="imageLink"><img src="./img/award2.jpg" border="2" height="200"></a>&nbsp;&nbsp; <a href="./img/award.jpg" target="_blank" class="imageLink"><img src="./img/award.jpg" border="2" height="200"></a>&nbsp;&nbsp;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ceremony at IEEE ICC 2024.
+        <div class="image-gallery">
+            <img src="./img/award2.jpg" data-full="./img/award2.jpg" height="200" border="2"
+                alt="Heinrich Hertz Award photo 1" loading="lazy">
+
+            <figure class="image-item">
+                <img src="./img/award.jpg" data-full="./img/award.jpg" height="200" border="2"
+                    alt="Heinrich Hertz Award photo 2" loading="lazy">
+                <figcaption class="caption">Ceremony at IEEE ICC 2024</figcaption>
+            </figure>
+        </div>
         <br>
         <br>
         <h3>Conference Best Paper Awards</h3>
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./img/SPCC.jpg" target="_blank" class="imageLink"><img src="./img/SPCC.jpg" border="2" height="180"></a>&nbsp;&nbsp;
-        <a href="./img/ISWCS.png" target="_blank" class="imageLink"><img src="./img/ISWCS.png" border="2" height="180"></a>&nbsp;&nbsp;
-        <a href="./img/vtc.png" target="_blank" class="imageLink"><img src="./img/vtc.png" border="2" height="180"></a>
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPCC-TC.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IEEE ISWCS 2022.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IEEE VTC-Fall 2022.
-        <br>
+        <div class="image-gallery">
+            <figure class="image-item">
+                <img src="./img/SPCC.jpg" data-full="./img/SPCC.jpg" height="180" border="2" alt="SPCC-TC Best Paper">
+                <figcaption class="caption">SPCC-TC BPA</figcaption>
+            </figure>
+
+            <figure class="image-item">
+                <img src="./img/ISWCS.png" data-full="./img/ISWCS.png" height="180" border="2"
+                    alt="IEEE ISWCS 2022 Best Paper">
+                <figcaption class="caption">IEEE ISWCS 2022 BPA</figcaption>
+            </figure>
+
+            <figure class="image-item">
+                <img src="./img/vtc.png" data-full="./img/vtc.png" height="180" border="2"
+                    alt="IEEE VTC-Fall 2022 Best Paper">
+                <figcaption class="caption">IEEE VTC-Fall 2022 BSPA</figcaption>
+            </figure>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const closeBtn = overlay.querySelector('.lightbox-close');
+
+            // Open on any <img data-full="...">
+            document.addEventListener('click', function (e) {
+                const t = e.target;
+                if (t && t.tagName === 'IMG' && t.dataset.full) {
+                    img.src = t.dataset.full;
+                    overlay.classList.add('is-open');
+                    document.body.classList.add('no-scroll');
+                }
+            });
+
+            function close() {
+                overlay.classList.remove('is-open');
+                document.body.classList.remove('no-scroll');
+                img.src = '';
+            }
+
+            // Close on backdrop or ×
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay || e.target === closeBtn) close();
+            });
+
+            // Prevent closing when clicking the big image
+            img.addEventListener('click', function (e) { e.stopPropagation(); });
+
+            // ESC to close
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+            });
+        });
+    </script>
+
+    <!-- end of <body>, just before </body> -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+
 </body>
 
 </html>
-
-
-
-
