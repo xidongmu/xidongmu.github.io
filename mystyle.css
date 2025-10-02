@@ -240,3 +240,84 @@ body { margin: 0; }
   .logos-equal { grid-template-columns: 1fr; }
   .logo-box { height: 90px; }
 }
+
+/* == Site-wide responsive base == */
+:root {
+  --page-max: 1100px;   /* set your desktop width once */
+  --page-pad: 16px;     /* side padding on small screens */
+  --logo-h: 78px;       /* default logo height */
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body { margin: 0; }
+
+/* Fluid media by default */
+img, video { max-width: 100%; height: auto; }
+
+/* A centered, padded page container (we'll add this wrapper in each page) */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+
+/* Make your common blocks fill the container width neatly */
+.page .block,
+.page .block-border {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;               /* let .page handle centering */
+}
+
+/* Header logos (used on pages where logos appear) */
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 10px 0;
+}
+.logos img {
+  height: var(--logo-h);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Photo + bio two-column (on index) turns to single-column on mobile */
+#photo-bio {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Let nav links wrap instead of overflowing */
+.block h2 a { display: inline-block; margin: 6px 8px 0 0; }
+
+/* Make wide elements scrollable on phones (tables, code, big images) */
+.responsive-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Typographic scaling */
+h1 { font-size: clamp(22px, 4vw, 34px); line-height: 1.25; }
+h2 { font-size: clamp(18px, 2.8vw, 24px); }
+
+/* Gallery (if used) becomes responsive grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.gallery img { width: 100%; height: auto; display: block; }
+
+/* === Mobile tweaks === */
+@media (max-width: 768px) {
+  :root { --logo-h: 64px; }
+
+  #photo-bio { grid-template-columns: 1fr; }
+  #photo img { width: 160px; height: auto; }
+
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
